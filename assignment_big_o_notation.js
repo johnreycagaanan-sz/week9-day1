@@ -314,7 +314,7 @@ const reversed = arr2.reverse();                                //? O(n)
 
 //? Problem 5:
 
-        const array5 = [1,2,3,4,5,6,7,8];
+        const array5 = [1,2,3,4,5,6,7,8];       //O(1)
         function determineSumOfSequentialArray(array) {
                 return array.length * (array.length + 1)/2;      //O(1)
         }
@@ -400,12 +400,11 @@ const reversed = arr2.reverse();                                //? O(n)
         }
 //TOTAL TIME COMPLEXITY = O(n ^ 2) + O(1)
 //CONSOLIDATED TIME COMPLEXITY = O(n ^ 2)
-//SPACE COMPLEXITY = O(n)
+//SPACE COMPLEXITY = O(1)
 //Explanation:
 //Neglecting all the constant time complexities, the total time complexity would be O(n ^ 2).
-//The space complexity is O(1) because the output array is equal to the number of elements in the input array.
-//This means that as the data in the input array increases, the output array also increases in space.
-
+//The space complexity is O(1) because the output array always equal to the number of elements in the
+//input array
 //? Problem 9: 
 
         function returnDupes(array, array2) {
