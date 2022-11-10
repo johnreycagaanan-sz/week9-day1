@@ -437,10 +437,10 @@ const reversed = arr2.reverse();                                //? O(n)
                 }, 0);
         }
 
-//TOTAL TIME COMPLEXITY = O(n * n* 1)
-//CONSOLIDATED TIME COMPLEXITY = O(n ^ 2)
+//TOTAL TIME COMPLEXITY = O(n) + O(n) + O(1)
+//CONSOLIDATED TIME COMPLEXITY = O(n)
 //SPACE COMPLEXITY = O(1)
 //Explanation:
-//The total time complexity is O(n * n *1). Neglecting the constant time complexity,
-//the consolidated time complexity would equal to the total time complexity which is O(n ^ 2).
+//The total time complexity is O(2n). Neglecting the constant,
+//the consolidated time complexity is equal to O(n).
 //The space complexity is O(1) because it always just returns the sum of the filtered array.
