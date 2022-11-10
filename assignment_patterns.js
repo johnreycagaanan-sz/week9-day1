@@ -1,47 +1,50 @@
 //! Problem 1
 
 const areThereDuplicates = (arrOfLetters) => {
-    let first = 0, hasDuplicate = false;
+    if(arrOfLetters.length===0) return null;
+    let first = 0;
     while(first < arrOfLetters.length -1){
         let next = first+1;
         if(arrOfLetters[first]===arrOfLetters[next]){
-            return hasDuplicate = true;
+            return true;
         } else {
             first++;
         }
     }
-    return hasDuplicate
+    return false
 }
 //Tests
 console.log(areThereDuplicates(['a', 'a', 'c', 'd']))// true
 console.log(areThereDuplicates(['a', 'b', 'c'])) // false
 console.log(areThereDuplicates(['a', 'b', 'b', 'c'])) // true
+console.log(areThereDuplicates([])) // null
+
 
 
 
 //!Problem 2
 
 const avgPair = (arr, avgTarget) => {
- let first = 0, last = arr.length -1, hasTarget = false;
-    if(arr.length ===0) return hasTarget;
+ let first = 0, last = arr.length -1;
+    if(arr.length ===0) return false;
 
     while(first < last){
         let avg = (arr[first] + arr[last])/2
         if (avg === avgTarget){
-            return hasTarget=true;
+            return true;
         }else if (avg < avgTarget){
             first++;
         }else {
             last--;
         }
     }
-    return hasTarget
+    return false
 }
 // Test Cases: 
-// console.log(avgPair([1,2,3],2.5)) //true
-// console.log(avgPair([1,3,3,5,6,7,10,12,19],8)) //true
-// console.log(avgPair([-1,0,3,4,5,6], 4.1)) //false
-// console.log (avgPair([],4)) //false
+console.log(avgPair([1,2,3],2.5)) //true
+console.log(avgPair([1,3,3,5,6,7,10,12,19],8)) //true
+console.log(avgPair([-1,0,3,4,5,6], 4.1)) //false
+console.log (avgPair([],4)) //false
 
 //! Problem 3
 const minSubarraySum = (arr, n) => {
@@ -63,8 +66,8 @@ const minSubarraySum = (arr, n) => {
 
 }
 // Test Cases:
-// console.log(minSubarraySum([100,200,300,400], 2));
-// console.log(minSubarraySum([1,4,2,10,23,3,1,0,20], 4)); 
-// console.log(minSubarraySum([-3,4,0,-2,6,-1], 2))
-// minSubarraySum([3,-2,7,-4,1,-1,4,-2,1],2)
-// minSubarraySum([2,3], 3) null
+console.log(minSubarraySum([100,200,300,400], 2));
+console.log(minSubarraySum([1,4,2,10,23,3,1,0,20], 4)); 
+console.log(minSubarraySum([-3,4,0,-2,6,-1], 2))
+console.log(minSubarraySum([3,-2,7,-4,1,-1,4,-2,1],2))
+console.log(minSubarraySum([2,3], 3))
