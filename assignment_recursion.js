@@ -53,7 +53,22 @@ const flatTheArray = (arr) => {
 //! Problem 4
 
 const capitalizeFirstLetter = (array) => {
+    let newArray =[]
+
     for(let i = 0 ; i < array.length; i++){
-        
+        if(typeof array[i]==='string'){
+            newArray.push(array[i][0].toUpperCase() + array[i].slice(1))
+        } else if(typeof array[i] === 'object'){
+            array = array.concat(capitalizeFirstLetter(array[i]))
+        }
     }
+    return newArray
 }
+
+console.log(capitalizeFirstLetter([['hello','world'],'world', 'sample']))
+
+// const test = (string) => {
+//     return typeof(string[0])
+// }
+
+// console.log(test('sample'))
