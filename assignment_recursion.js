@@ -9,8 +9,6 @@ return reversedArr.join('')
 
 console.log(reverseString('hello'))
 
-
-
 //! Problem #2
 
 function palindrome(str, lastIndex = str.length-1, reversedArr = []){
@@ -55,7 +53,7 @@ const capitalizeFirstLetter = (array) => {
     return [letters.join('')].concat(capitalizeFirstLetter(array.slice(1)))
 }
 
-console.log(capitalizeFirstLetter(['one', 'two']))
+console.log(capitalizeFirstLetter(['Tony', 'Truck']))
 
 //! Problem 5
 
@@ -64,4 +62,5 @@ const capitalizeAllLetters = (array) => {
     return [array[0].toUpperCase()].concat(capitalizeAllLetters(array.slice(1)))
 }
 
-console.log(capitalizeAllLetters(['tony','kim', 'numba', 'wan']))
+let words = ['tony', 'kim']
+console.log(capitalizeAllLetters(words))
