@@ -53,7 +53,7 @@ const capitalizeFirstLetter = (array) => {
     return [letters.join('')].concat(capitalizeFirstLetter(array.slice(1)))
 }
 
-console.log(capitalizeFirstLetter(['Tony', 'Truck']))
+console.log(capitalizeFirstLetter(['tony', 'truck']))
 
 //! Problem 5
 
