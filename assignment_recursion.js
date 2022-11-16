@@ -7,7 +7,8 @@ function reverseString(str, lastIndex = str.length-1, reversedArr = []){
 return reversedArr.join('')
 }
 
-console.log(reverseString('hello'))
+console.log(reverseString('tony'))
+console.log(reverseString('baker'))
 
 //! Problem #2
 
@@ -20,6 +21,8 @@ function palindrome(str, lastIndex = str.length-1, reversedArr = []){
 return reversedArr.join('') === str
 }
 console.log(palindrome('tony'))
+console.log(palindrome('monkey'))
+console.log(palindrome('tacoocat'))
 console.log(palindrome('sos'))
 
 //! Problem #3
