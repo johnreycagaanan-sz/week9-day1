@@ -8,7 +8,7 @@ const maxProfit = (prices) => {
      minPrice = Math.min(minPrice, prices[i])
     }
     return max
-   }
+   } 
    
    
    console.log(maxProfit([7, 1, 5, 3, 6, 4]))
