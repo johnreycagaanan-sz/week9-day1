@@ -1,14 +1,26 @@
-const insertionSort = (arr) => {
-    let currValue; 
-    for (let i = 1; i < arr.length; i++) {
-        currValue = arr[i];
-        for (let j = i - 1; j >= 0 && arr[j] > currValue; j--) {
-            arr[j+1] = arr[j]
-            arr[j] = currValue
-        }
+const quickSortMethod = (arr, left =0, right = arr.length -1 ) => {
+    if(left < right ){
+        let pivotIndex = pivot(arr, left, right);
+        quickSortMethod(arr, left, pivotIndex -1)
+        quickSortMethod(arr, pivotIndex +1, right)
     }
-
-    return arr; 
+    return arr;
 }
 
-console.log(insertionSort([12, 3, 14, 18, 2, 7, 9]))
+const pivot = (arr, left = 0, right = arr.length - 1) =>{
+    let pivot = arr[left]
+    let swapIndex = left
+
+    for(let i =left+1; i <= right; i++){
+        if(pivot > arr[i]){
+            swapIndex++;
+            // console.log(`PIVOT IS ${pivot} and arr[i] is ${arr[i]} so SWAPINDEX ${swapIndex}`)
+            [arr[swapIndex], arr[i]] = [arr[i], arr[swapIndex]]
+            // console.log(`NEW ARR IS ${arr}`)
+        }
+    }
+    [arr[left], arr[swapIndex]] = [arr[swapIndex], arr[left]]
+    return swapIndex;
+}
+
+console.log(quickSortMethod([12, 3, 14, 18, 2, 7, 9]))
