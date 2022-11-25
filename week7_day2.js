@@ -44,7 +44,7 @@ const quickSortMethod = (arr, left =0, right = arr.length -1 ) => {
     }
     return arr;
 }
-
+ 
 const pivot = (arr, left = 0, right = arr.length - 1) =>{
     let pivot = arr[left]
     let swapIndex = left
@@ -52,9 +52,7 @@ const pivot = (arr, left = 0, right = arr.length - 1) =>{
     for(let i =left+1; i <= right; i++){
         if(pivot > arr[i]){
             swapIndex++;
-            // console.log(`PIVOT IS ${pivot} and arr[i] is ${arr[i]} so SWAPINDEX ${swapIndex}`)
             [arr[swapIndex], arr[i]] = [arr[i], arr[swapIndex]]
-            // console.log(`NEW ARR IS ${arr}`)
         }
     }
     [arr[left], arr[swapIndex]] = [arr[swapIndex], arr[left]]

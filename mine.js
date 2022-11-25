@@ -1,21 +1,15 @@
-const isValid = (s) => {
-    // edge cases: 
-  	if (!s || s.length === 1) return false;
-   let openFrequency = {'{': 0, '[': 0, '(': 0}
-   let closeFrequency = {'}': 0, ']': 0, ')': 0}
-   for(let string of s){
-     if(string === '{' || string === '[' ||string === '('){
-        openFrequency[string] = openFrequency[string] +1
-    } else if(string === '}' || string === ']' ||string === ')'){
-        closeFrequency[string] = closeFrequency[string] +1
-    }
-   }
-   const open = Object.values(openFrequency)
-   const close = Object.values(closeFrequency)
+const testing = (arr1, check) => {
+//const arr1 = ['hello', 'world', 'one']
+//const check = 'db'
+console.log(check)
+counter = 0;
+const arr2 = arr1.filter(word => { 
+  for( let i =0; i < check.length -1 ;i++){
+    if (word.contains(check[i])){
+      break;
+    }counter++
+  }
+})
+}
 
-   
-   return open.every(item => close.includes(item)) && close.every(item => open.includes(item))
- };
-
-
- console.log(isValid('())([]{}'))
+console.log(testing(['hello', 'world', 'one'], 'db'))
