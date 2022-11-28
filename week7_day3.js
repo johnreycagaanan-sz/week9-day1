@@ -4,7 +4,7 @@ const reverseString = (str) => {
     if(str.length===1) return str
     return str[str.length - 1].concat(reverseString(str.slice(0,str.length-1)))
 }
-
+// console.log(reverseString('Let\'s Start'))
 //! Problem # 2
 
 const isPalindrome = (str) => {
@@ -18,6 +18,8 @@ const isPalindrome = (str) => {
     }
     return true
 }
+// console.log(isPalindrome('racecar'))
+// console.log(isPalindrome('hello'))
 
 //! Problem # 3
 const reverseInt = (int) => {
@@ -25,6 +27,8 @@ const reverseInt = (int) => {
     if (string.length === 1) return string
     return Number(string[string.length - 1].concat(reverseInt(string.slice(0, string.length -1))))
 }
+// console.log(reverseInt(521))
+
 
 //! Problem # 4
 const capitalizeLetters = (str) => {
@@ -34,6 +38,9 @@ const capitalizeLetters = (str) => {
     }
     return arr.join(' ')
 }
+
+// console.log(capitalizeLetters('i love javascript'))
+
 
 //! Problem # 5
 const maxCharacter = (str) => {
@@ -51,6 +58,8 @@ const maxCharacter = (str) => {
     }
     return maxLetter
 }
+
+// console.log(maxCharacter('javascript'))
 
 //! Problem # 6
 const fizzBuzz = () => {
@@ -74,7 +83,7 @@ const longestWord = (sen) => {
     return maxWord
 }
 
-console.log(longestWord('Hi there, my name is Brad'))
+// console.log(longestWord('Hi there, my name is Brad'))
 
 //! Problem # 8
 const chunkArray = (arr, len) => {
@@ -95,6 +104,10 @@ const chunkArray = (arr, len) => {
     }
   }
 
+// console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 3))
+// console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 2))
+
+
 //! Problem # 9
 
 const flattenArray = (arrays) => {
@@ -109,6 +122,8 @@ const flattenArray = (arrays) => {
     }
     return newArr
 }
+
+// console.log(flattenArray([[1, 2], [3, 4], [5, 6], [7]]))
 
 //! Problem # 10
 const isAnagram = (str1, str2) => {
@@ -132,6 +147,12 @@ const isAnagram = (str1, str2) => {
     return true
 }
 
+// console.log(isAnagram('elbow', 'below'))
+// console.log(isAnagram('elbo', 'below'))
+// console.log(isAnagram('elbow', 'belo'))
+// console.log(isAnagram('Dormitory', 'dirtyroom###'))
+
+
 //! Problem # 11
 const letterChanges = (str) => {
     if (!str.length) return ''
@@ -151,6 +172,10 @@ const letterChanges = (str) => {
     return newString
   }
 
+// console.log(letterChanges('hello there'))
+// console.log(letterChanges('zzzd'))
+
+
 //! Problem # 12
 const addAll = (...args) =>{
     let sum = 0
@@ -159,6 +184,9 @@ const addAll = (...args) =>{
     }
     return sum
 }
+
+// console.log(addAll(2,5,6,7))
+
 
 //! Problem # 13
 const isPrime = (n) => {
@@ -196,6 +224,9 @@ const sumAllPrimes = (num) => {
     return sum
 }
 
+// console.log(sumAllPrimes(10))
+
+
 //! Problem # 14
 
 const seekAndDestroy = (...args) => {
@@ -205,6 +236,9 @@ const seekAndDestroy = (...args) => {
     }
     return filtered
 }
+
+// console.log(seekAndDestroy([2, 3, 4, 6, 6, 'hello'], 2, 6))
+
 
 //! Problem # 15
 const sortByHeight = (arr) => {
@@ -225,7 +259,8 @@ const sortByHeight = (arr) => {
     return toReturn
 }
 
-console.log()
+// console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]))
+
 
 //! Problem # 16
 
@@ -242,11 +277,11 @@ const missingLetters = (str) => {
     if(code === 121) return 'z'
     else return undefined
 }
-console.log(missingLetters("abce"))
-console.log(missingLetters("abcdefghjklmno"))
-console.log(missingLetters("abcdefghijklmnopqrstuvwxyz"))
-console.log(missingLetters("bcde"))
-console.log(missingLetters("abcdefghijklmnopqrstuvwxy"))
+// console.log(missingLetters("abce"))
+// console.log(missingLetters("abcdefghjklmno"))
+// console.log(missingLetters("abcdefghijklmnopqrstuvwxyz"))
+// console.log(missingLetters("bcde"))
+// console.log(missingLetters("abcdefghijklmnopqrstuvwxy"))
 
 
 
