@@ -1,5 +1,5 @@
-const chunkArray = (arr, len) => {
-    
-}
+let letter = 'z'
 
-console.log(chunkArray('javascriptssss'))
+const code = letter.charCodeAt(0)
+
+console.log(code)
