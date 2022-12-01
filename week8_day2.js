@@ -128,11 +128,10 @@ class DoublyLinkedList{
 
 const getDecimalValue = (head) => {
     let sum = 0
-    let toAdd = 0; counter = head.length -1
-    // let newArr = [head.length]
-    // while(counter >=0){
-        
-    // }
     head.reverse()
+    for(let i = 0,j = 1; i < head.length; i++, j*= 2){
+        if(head[i] === 1) sum+= j
+    }
+    return sum
 }
 console.log(getDecimalValue([1,1,0]))
