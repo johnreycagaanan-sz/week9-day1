@@ -116,4 +116,10 @@ class SinglyLinkedList {
         this.length --
         return removed
     }
+    sort(){
+        if(!this.length) return null
+        if(this.length===1) return this
+        let newList = new SinglyLinkedList()
+        let min = this.head
+    }
 }
