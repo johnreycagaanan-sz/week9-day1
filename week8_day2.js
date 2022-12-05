@@ -134,4 +134,4 @@ const getDecimalValue = (head) => {
     }
     return sum
 }
-console.log(getDecimalValue([1,1,0]))
+console.log(getDecimalValue([1,0,1]))
